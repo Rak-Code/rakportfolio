@@ -1,8 +1,10 @@
-import React from 'react';
-import {  FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiMenu, HiX } from 'react-icons/hi';
+import React, { useState } from 'react';
+import { FaTwitter, FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -14,38 +16,51 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-teal-100 via-teal-200 to-teal-300 py-5 px-9 flex justify-between items-center z-50">
+    <motion.nav
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+      className="fixed top-0 left-0 w-full bg-gray-800 py-5 px-9 flex justify-between items-center z-50"
+    >
       <div className="text-3xl" style={{ fontFamily: 'var(--font-2)' }}>
-        <span className="text-teal-800">Port</span>
-        <span className="text-teal-900">Folio</span>
+        <span className="text-gray-100">Port</span>
+        <span className="text-gray-300">Folio</span>
       </div>
-      <div className="flex space-x-8"style={{ fontFamily: 'var(--font-2)' }}>
-        <button onClick={() => scrollToSection('home')} className="text-teal-800 text-xl hover:text-teal-600 transition duration-300">
+      
+      {/* Hamburger Menu Icon */}
+      <div className="block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FaTimes className="text-gray-100 text-2xl" /> : <FaBars className="text-gray-100 text-2xl" />}
+      </div>
+
+      {/* Menu Items */}
+      <div className={`lg:flex lg:space-x-8 space-y-4 lg:space-y-0 lg:items-center ${isOpen ? 'block' : 'hidden'}`}>
+        <button onClick={() => scrollToSection('home')} className="text-gray-100 text-xl hover:text-gray-400 transition duration-300">
           Home
         </button>
-        <button onClick={() => scrollToSection('skills')} className="text-teal-800 text-xl hover:text-teal-600 transition duration-300">
+        <button onClick={() => scrollToSection('skills')} className="text-gray-100 text-xl hover:text-gray-400 transition duration-300">
           Skills
         </button>
-        <button onClick={() => scrollToSection('projects')} className="text-teal-800 text-xl hover:text-teal-600 transition duration-300">
+        <button onClick={() => scrollToSection('projects')} className="text-gray-100 text-xl hover:text-gray-400 transition duration-300">
           Projects
         </button>
-        <button onClick={() => scrollToSection('contact')} className="text-teal-800 text-xl hover:text-teal-600 transition duration-300">
+        <button onClick={() => scrollToSection('contact')} className="text-gray-100 text-xl hover:text-gray-400 transition duration-300">
           Contact
         </button>
       </div>
-      <div className="flex space-x-4">
-        
+      
+      {/* Social Media Icons */}
+      <div className="hidden lg:flex space-x-4">
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-          <FaTwitter className="text-teal-800 hover:text-teal-600 transition duration-300" size={25} />
+          <FaTwitter className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <FaGithub className="text-teal-800 hover:text-teal-600 transition duration-300" size={25} />
+          <FaGithub className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin className="text-teal-800 hover:text-teal-600 transition duration-300" size={25} />
+          <FaLinkedin className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
 
