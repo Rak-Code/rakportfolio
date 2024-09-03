@@ -27,9 +27,9 @@ const SkillsExpertise = () => {
   }, [controls, inView]);
 
   return (
-    <div id="skills" className="bg-gray-800 py-16">
+    <div id="skills" className="bg-gray-800 py-16 px-4">
       <motion.h2
-        className="text-3xl font-bold text-gray-100 text-center mt-5 mb-8"
+        className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-100 text-center mt-5 mb-8"
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
@@ -38,7 +38,7 @@ const SkillsExpertise = () => {
         SKILLS & EXPERTISE
       </motion.h2>
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto"
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
@@ -47,15 +47,15 @@ const SkillsExpertise = () => {
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="flex items-center space-x-4"
+            className="flex items-center space-x-3 md:space-x-4"
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
             transition={{ duration: 1, delay: index * 0.1 }}
           >
-            <div className="flex-shrink-0 text-gray-100">{`0${index + 1}.`}</div>
+            <div className="flex-shrink-0 text-gray-100 text-base sm:text-lg">{`0${index + 1}.`}</div>
             <div className="flex-grow">
-              <div className="text-gray-400">{skill.name}</div>
+              <div className="text-gray-400 text-sm sm:text-base">{skill.name}</div>
               <div className="w-full bg-gray-700 h-1 mt-1">
                 <div className={`bg-gray-100 h-1 ${skill.level}`}></div>
               </div>

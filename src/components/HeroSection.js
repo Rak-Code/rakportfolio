@@ -7,11 +7,11 @@ const HeroSection = () => {
   return (
     <div 
       id="home" 
-      className="bg-gray-800 h-screen flex flex-col justify-center items-center relative overflow-hidden px-4" 
+      className="bg-gray-800 h-screen flex flex-col justify-center items-center relative overflow-hidden px-4"
       style={{ fontFamily: 'var(--font-2)' }}
     >
       <motion.h1
-        className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-4 z-20 relative text-center text-gray-200"
+        className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-8xl mb-4 z-20 relative text-center text-gray-200"
         style={{ fontFamily: 'var(--font-2)' }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -32,14 +32,14 @@ const HeroSection = () => {
           ]}
           loop={1}
           wrapper="p"
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-400 mb-8"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-400 mb-8"
           style={{ fontFamily: 'var(--font-1)' }}
         />
       </motion.div>
       <motion.img
         src={profileImage}  // Use the imported image
         alt="Profile"
-        className="absolute w-full sm:w-[80%] md:w-[70%] lg:w-[60%] h-auto object-cover z-10 opacity-70 rounded-2xl"
+        className="absolute w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] h-auto object-cover z-10 opacity-70 rounded-2xl"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 0.7, y: 0 }}
         transition={{ duration: 1, delay: 1 }}

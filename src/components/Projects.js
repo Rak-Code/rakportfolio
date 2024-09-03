@@ -57,10 +57,10 @@ const SelectedProjects = () => {
         animate={controls}
         transition={{ duration: 1 }}
       >
-        Projects I Have Worked On.
+        Projects I Have Worked On
       </motion.h2>
       <motion.div
-        className="flex ml-20 flex-wrap gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-6xl mx-auto px-4"
         ref={ref}
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
@@ -69,15 +69,17 @@ const SelectedProjects = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="w-40% max-w-2xl transform transition-transform duration-300 hover:scale-105"
+            className="flex flex-col bg-gray-700 rounded-lg shadow-md overflow-hidden transform transition-transform duration-200 hover:scale-105 hover:shadow-lg"
             ref={ref}
             initial={{ opacity: 0, y: 50 }}
             animate={controls}
-            transition={{ duration: 1, delay: index * 0.1 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05, translateY: -2 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <a href={project.link}>
-              <img src={project.image} alt={project.title} className="w-full h-3/4 rounded-lg shadow-md" />
-              <div className="mt-4 text-center">
+            <a href={project.link} className="block">
+              <img src={project.image} alt={project.title} className="w-full h-64 object-cover" />
+              <div className="p-4 text-center">
                 <p className="text-sm text-gray-400">{project.type} Project Link</p>
                 <h3 className="text-xl font-semibold text-gray-100">{project.title}</h3>
               </div>
