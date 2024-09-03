@@ -24,7 +24,7 @@ const Navbar = () => {
     >
       <div className="text-3xl" style={{ fontFamily: 'var(--font-2)' }}>
         <span className="text-gray-100">Port</span>
-        <span className="text-gray-300">Folio</span>
+        <span className="text-gray-100">Folio</span>
       </div>
       
       {/* Hamburger Menu Icon */}
