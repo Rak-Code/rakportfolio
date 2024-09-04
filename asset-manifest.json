@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rakportfolio/static/css/main.3bd9f03d.css",
-    "main.js": "/rakportfolio/static/js/main.9c4e7826.js",
+    "main.js": "/rakportfolio/static/js/main.24c0712e.js",
     "static/js/453.1407b060.chunk.js": "/rakportfolio/static/js/453.1407b060.chunk.js",
     "static/media/Project2.png": "/rakportfolio/static/media/Project2.d6674e73fff530dac060.png",
     "static/media/Project5.png": "/rakportfolio/static/media/Project5.1d91f23a77a761c12147.png",
@@ -10,11 +10,11 @@
     "static/media/Image1.png": "/rakportfolio/static/media/Image1.fe0f5dbbc36025407b78.png",
     "index.html": "/rakportfolio/index.html",
     "main.3bd9f03d.css.map": "/rakportfolio/static/css/main.3bd9f03d.css.map",
-    "main.9c4e7826.js.map": "/rakportfolio/static/js/main.9c4e7826.js.map",
+    "main.24c0712e.js.map": "/rakportfolio/static/js/main.24c0712e.js.map",
     "453.1407b060.chunk.js.map": "/rakportfolio/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3bd9f03d.css",
-    "static/js/main.9c4e7826.js"
+    "static/js/main.24c0712e.js"
   ]
 }
