@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
 import profileImage from '../images/dbzbg.jpg';  // Ensure this is the correct path to the image
 
 const HeroSection = () => {
+  const [text, setText] = useState('');
+  const steps = [" I'm a React Developer"];
+  const typingSpeed = 100;  // Speed of typing in milliseconds
+  const typingRef = useRef(null);  // Ref for managing typing effect
+
+  useEffect(() => {
+    let index = 0;
+    let charIndex = 0;
+    
+    const type = () => {
+      typingRef.current = setInterval(() => {
+        if (charIndex < steps[index].length) {
+          setText((prev) => prev + steps[index].charAt(charIndex));
+          charIndex++;
+        } else {
+          clearInterval(typingRef.current);
+          typingRef.current = setTimeout(() => {
+            setText('');  // Clear text for the next step
+            charIndex = 0;
+            index = (index + 1) % steps.length;
+            type();
+          }, 2000);  // Pause for 2 seconds before starting the next step
+        }
+      }, typingSpeed);
+    };
+
+    setText('');  // Initialize the text as empty
+    type();
+
+    // Cleanup function to clear the interval if the component unmounts
+    return () => {
+      clearInterval(typingRef.current);
+      clearTimeout(typingRef.current);
+    };
+  }, []);
+
   return (
     <div 
       id="home" 
@@ -25,16 +60,12 @@ const HeroSection = () => {
         transition={{ duration: 1, delay: 0.5 }}
         className="z-20 relative text-center"
       >
-        <Typical
-          steps={[
-            "Hi, I'm React Developer",
-            2000, // Pause for 2 seconds at the end
-          ]}
-          loop={1}
-          wrapper="p"
+        <p
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-gray-400 mb-8"
           style={{ fontFamily: 'var(--font-1)' }}
-        />
+        >
+          {text}
+        </p>
       </motion.div>
       <motion.img
         src={profileImage}  // Use the imported image
