@@ -10,25 +10,25 @@ const projects = [
   {
     title: 'React Dashboard',
     type: 'Web Page',
-    link: 'https://github.com/Rak-Code/TaskManagementApp',
+    link: 'https://rak-code.github.io/PortFolio/',
     image: projectImage1,
   },
   {
     title: 'BlaXcut',
     type: 'Website',
-    link: 'https://github.com/Rak-Code/TaskManagementApp',
+    link: 'https://rak-code.github.io/PortFolio/',
     image: projectImage2,
   },
   {
     title: 'Task Management App',
     type: 'App',
-    link: 'https://github.com/Rak-Code/TaskManagementApp',
+    link: 'https://rak-code.github.io/PortFolio/',
     image: projectImage3,
   },
   {
     title: 'SecureAuth',
     type: 'Authentication',
-    link: 'https://github.com/Rak-Code/TaskManagementApp',
+    link: 'https://rak-code.github.io/PortFolio/',
     image: projectImage4,
   },
   // Add more projects as needed
