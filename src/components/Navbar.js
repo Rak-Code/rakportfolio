@@ -50,13 +50,13 @@ const Navbar = () => {
       
       {/* Social Media Icons */}
       <div className="hidden lg:flex space-x-4">
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://x.com/RakeshG33139449?s=09" target="_blank" rel="noopener noreferrer">
           <FaTwitter className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Rak-Code" target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/rakesh-gupta-59352722b" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-gray-100 hover:text-gray-400 transition duration-300" size={25} />
         </a>
       </div>

@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Social Media Links */}
           <div className="flex space-x-6">
             <a
-              href="https://www.linkedin.com/in/your-linkedin"
+              href="https://www.linkedin.com/in/rakesh-gupta-59352722b"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-100 hover:text-gray-400 transition duration-300"
@@ -28,7 +28,7 @@ const Footer = () => {
               <FaLinkedin size={30} />
             </a>
             <a
-              href="https://github.com/your-github"
+              href="https://github.com/Rak-Code"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-100 hover:text-gray-400 transition duration-300"
@@ -36,7 +36,7 @@ const Footer = () => {
               <FaGithub size={30} />
             </a>
             <a
-              href="https://twitter.com/your-twitter"
+              href="https://x.com/RakeshG33139449?s=09"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-100 hover:text-gray-400 transition duration-300"
